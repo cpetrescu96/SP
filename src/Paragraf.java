@@ -1,4 +1,4 @@
-public class Paragraf implements ElementPagina{
+public class Paragraf extends AbstractElement{
 	public String text;
 	
 	public Paragraf(String text){
@@ -13,13 +13,8 @@ public class Paragraf implements ElementPagina{
 		System.out.println("Paragraf");
 	}
 
-	public void addElement(ElementPagina e){}		
-	public void removeElement(ElementPagina e) {}
-	public int getElements() { return 0;}
-
 	public void print() {
-		System.out.println(this.text);
-		
+		System.out.println(this.text);	
 	}
 
 }

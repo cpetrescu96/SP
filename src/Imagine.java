@@ -1,26 +1,18 @@
 
-public class Imagine implements ElementPagina {
+public class Imagine extends AbstractElement {
 	public String imagePath;
 	
 	public Imagine(String imagePath){
 		this.imagePath = imagePath;
-	}
-
-	public void addElement(ElementPagina e) {
-		// TODO Auto-generated method stub	
-	}
-
-	public void removeElement(ElementPagina e) {
-		// TODO Auto-generated method stub	
-	}
-
-	public int getElements() {
-		// TODO Auto-generated method stub
-		return 0;
+		this.loadData(imagePath);
 	}
 
 	public void print() {
 		System.out.println("Showing image from :"+this.imagePath);
+	}
+	
+	public void loadData(String path){
+		//Dummy function to act as a data loader.
 	}
 
 }
