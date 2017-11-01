@@ -1,6 +1,8 @@
 
 public abstract class AbstractElement implements ElementPagina {
 
+	
+	
 	public void addElement(ElementPagina e){
 		
 	}

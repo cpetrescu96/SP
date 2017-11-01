@@ -1,5 +1,12 @@
 public class Paragraf extends AbstractElement{
+	
 	public String text;
+	public AlignStrategy alignment;
+	
+	public Paragraf(String text, AlignStrategy alignment){
+		this.text = text;
+		this.alignment = alignment;
+	}
 	
 	public Paragraf(String text){
 		this.text = text;
@@ -12,9 +19,16 @@ public class Paragraf extends AbstractElement{
 	public void show(){
 		System.out.println("Paragraf");
 	}
+	
+	public void setAlign(AlignStrategy as){
+		this.alignment = as;
+	}
 
 	public void print() {
-		System.out.println(this.text);	
+		if(alignment == null){
+			System.out.println("***"+ this.text);
+		}
+		else this.alignment.printAligned(this.text);
 	}
 
 }
